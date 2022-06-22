@@ -28,37 +28,39 @@
     <b>和新人的關係</b>
     <p>鴻海夥伴請選"鴻海專屬，我都熟"，別擔心你們都有餅:)</p>
 
-    <div class="radio_option">
-      <input
-        name="relation"
-        type="radio"
-        id="one"
-        value="男方親友"
-        v-model="relation"
-      />
-      <label for="one">男方親友</label>
-    </div>
+    <div class="wrap">
+      <div class="radio_option">
+        <input
+          name="relation"
+          type="radio"
+          id="one"
+          value="男方親友"
+          v-model="relation"
+        />
+        <label for="one">男方親友</label>
+      </div>
 
-    <div class="radio_option">
-      <input
-        name="relation"
-        type="radio"
-        id="two"
-        value="女方親友"
-        v-model="relation"
-      />
-      <label for="two">女方親友</label>
-    </div>
+      <div class="radio_option">
+        <input
+          name="relation"
+          type="radio"
+          id="two"
+          value="女方親友"
+          v-model="relation"
+        />
+        <label for="two">女方親友</label>
+      </div>
 
-    <div class="radio_option">
-      <input
-        name="relation"
-        type="radio"
-        id="three"
-        value="鴻海專屬，我都熟"
-        v-model="relation"
-      />
-      <label for="three">鴻海專屬，我都熟</label>
+      <div class="radio_option">
+        <input
+          name="relation"
+          type="radio"
+          id="three"
+          value="鴻海專屬，我都熟"
+          v-model="relation"
+        />
+        <label for="three">鴻海專屬，我都熟</label>
+      </div>
     </div>
 
     <div class="margin_top_45"></div>
@@ -68,39 +70,40 @@
     <b>是否出席婚宴</b>
     <p>無法前來的朋友請不要有壓力，非常感謝你們的祝福！</p>
 
-    <div class="radio_option">
-      <input
-        name="show"
-        type="radio"
-        id="one"
-        value="出席，一定要親眼見證！"
-        v-model="show"
-      />
-      <label for="one">出席，一定要親眼見證！</label>
-    </div>
+    <div class="wrap">
+      <div class="radio_option">
+        <input
+          name="show"
+          type="radio"
+          id="one"
+          value="出席，一定要親眼見證！"
+          v-model="show"
+        />
+        <label for="one">出席，一定要親眼見證！</label>
+      </div>
 
-    <div class="radio_option">
-      <input
-        name="show"
-        type="radio"
-        id="two"
-        value="好想去，但當天有事，禮到人不到～～"
-        v-model="show"
-      />
-      <label for="two">好想去，但當天有事，禮到人不到～～</label>
-    </div>
+      <div class="radio_option">
+        <input
+          name="show"
+          type="radio"
+          id="two"
+          value="好想去，但當天有事，禮到人不到～～"
+          v-model="show"
+        />
+        <label for="two">好想去，但當天有事，禮到人不到～～</label>
+      </div>
 
-    <div class="radio_option">
-      <input
-        name="show"
-        type="radio"
-        id="three"
-        value="無法出席，祝你們幸福美滿！"
-        v-model="show"
-      />
-      <label for="three">無法出席，祝你們幸福美滿！</label>
+      <div class="radio_option">
+        <input
+          name="show"
+          type="radio"
+          id="three"
+          value="無法出席，祝你們幸福美滿！"
+          v-model="show"
+        />
+        <label for="three">無法出席，祝你們幸福美滿！</label>
+      </div>
     </div>
-
     <div class="margin_top_45"></div>
 
     <!------------- 第五題 ------------->
@@ -125,28 +128,29 @@
     <h1>8</h1>
     <b>想要收到紙本喜帖嗎</b>
 
-    <div class="radio_option">
-      <input
-        name="invitation"
-        type="radio"
-        id="one"
-        value="我要我要，請寄喜帖給我～～"
-        v-model="invitation"
-      />
-      <label for="one">我要我要，請寄喜帖給我～～</label>
-    </div>
+    <div class="wrap">
+      <div class="radio_option">
+        <input
+          name="invitation"
+          type="radio"
+          id="one"
+          value="我要我要，請寄喜帖給我～～"
+          v-model="invitation"
+        />
+        <label for="one">我要我要，請寄喜帖給我～～</label>
+      </div>
 
-    <div class="radio_option">
-      <input
-        name="invitation"
-        type="radio"
-        id="two"
-        value="不用哦，婚禮相關資訊我都知道了！"
-        v-model="invitation"
-      />
-      <label for="two">不用哦，婚禮相關資訊我都知道了！</label>
+      <div class="radio_option">
+        <input
+          name="invitation"
+          type="radio"
+          id="two"
+          value="不用哦，婚禮相關資訊我都知道了！"
+          v-model="invitation"
+        />
+        <label for="two">不用哦，婚禮相關資訊我都知道了！</label>
+      </div>
     </div>
-
     <div class="margin_top_45"></div>
 
     <!------------- 第九題 ------------->
@@ -177,7 +181,7 @@ export default {
       child_num: "",
       veg_num: "",
       invitation: "",
-      feedback: ""
+      feedback: "",
     };
   },
 };
@@ -191,5 +195,10 @@ export default {
 
 label {
   margin-left: 15px;
+}
+
+.wrap {
+    display: grid;
+    text-align: left;
 }
 </style>
