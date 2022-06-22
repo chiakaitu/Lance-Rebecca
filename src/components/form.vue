@@ -10,7 +10,7 @@
     <!-- 文字 end -->
 
     <!-- 表單 start -->
-    <form class="display_flex middle"  @submit="submit">
+    <form class="display_flex middle" v-on:click="addGoogle">
       <!------------- 第一題 ------------->
       <h1>1</h1>
       <b>您的大名</b>
@@ -162,7 +162,7 @@
       <!-- 表單 end -->
 
       <!-- 按鈕 start -->
-      <button>送出</button>
+      <button type="submit">送出</button>
       <!-- 按鈕 end -->
     </form>
     <div class="margin_top_45"></div>
@@ -185,12 +185,12 @@ export default {
       veg_num: "",
       invitation: "",
       feedback: "",
-      creds: require("../../auth.json")
+      creds: require("../../auth.json"),
     };
   },
   methods: {
-    submit: this.addGoogle(),
-    async addGoogle() {
+    async addGoogle(e) {
+      e.preventDefault();
       const newData = {
         time: new Date().toLocaleString(),
         name: this.name,
