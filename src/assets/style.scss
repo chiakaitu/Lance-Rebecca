@@ -6,6 +6,7 @@
         font-size: 12px;
         line-height: 25px;
     }
+    font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif;
 }
 
 .container {
@@ -27,7 +28,7 @@
             align-items: flex-end;
         }
         &:not(:first-child):not(:nth-child(2)) {
-            margin-top: 80px;
+            margin-top: 175px;
         }
     }
 }
