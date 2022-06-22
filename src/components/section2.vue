@@ -1,18 +1,18 @@
 <template>
   <div class="box">
     <!------------ 圖片區塊 start ------------>
-    <div class="wrap">
+    <div class="wrap display_flex">
 
       <!-- 左邊 start -->
       <div class="left">
-        <img class="photo section3_img" :src="photo2_1" alt="" />
+        <img class="photo" :src="photo2_1" alt="" />
       </div>
       <!-- 左邊 end -->
 
       <!-- 右邊 start -->
       <div class="right display_flex middle">
-        <img class="photo section3_img" :src="photo2_2" alt="" />
-        <img class="photo section3_img" :src="photo2_3" alt="" />
+        <img class="photo" :src="photo2_2" alt="" />
+        <img class="photo" :src="photo2_3" alt="" />
       </div>
       <!-- 右邊 end -->
 
@@ -44,17 +44,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.wrap {
-  display: flex;
-}
-
-.left {
-  width: 50%;
-  margin-right: 15px;
-}
-
 .right {
-  width: 50%;
   justify-content: space-between;
 }
 

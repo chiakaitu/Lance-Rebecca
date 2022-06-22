@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <img class="photo joy" :src="photo3" alt="" />
+    <img class="photo" :src="photo3" alt="" />
     <div class="float_right middle margin_top_30">
       <p>從「我喜歡」</p>
       <p>到「我願意」</p>
