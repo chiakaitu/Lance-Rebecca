@@ -15,6 +15,16 @@
     "Microsoft JhengHei",
     "微軟正黑體",
     sans-serif;
+
+    hr {
+        width: 85vw;
+        height: 1px;
+        // height: 1px;
+        // border-radius: 100%;
+        border: none;
+        background-color: red;
+
+    }
 }
 
 .container {
@@ -30,7 +40,7 @@
     width: 100vw;
 
     .box {
-        padding: 0 10%;
+        padding: 0 5%;
         width: 100%;
         margin-top: 30px;
 
@@ -90,6 +100,10 @@
 
 .margin_top_35 {
     margin-top: 35px;
+}
+
+.margin_top_45 {
+    margin-top: 45px;
 }
 
 .line_height_25 {

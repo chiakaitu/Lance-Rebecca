@@ -6,6 +6,7 @@
     <sectionThree />
     <sectionFour />
     <sectionFive />
+    <formSection />
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import sectionTwo from "./components/section2.vue";
 import sectionThree from "./components/section3.vue";
 import sectionFour from "./components/section4.vue";
 import sectionFive from "./components/section5.vue";
+import formSection from "./components/form.vue";
 
 export default {
   name: "App",
@@ -26,7 +28,8 @@ export default {
     sectionTwo,
     sectionThree,
     sectionFour,
-    sectionFive
+    sectionFive,
+    formSection
   },
 };
 </script>
