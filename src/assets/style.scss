@@ -5,6 +5,9 @@
 
     p {
         font-size: 12px;
+    }
+
+    h4, h5, p, b {
         line-height: 25px;
     }
 
@@ -38,7 +41,7 @@
         }
 
         &:not(:first-child):not(:nth-child(2)) {
-            margin-top: 175px;
+            margin-top: 150px;
         }
     }
 }
