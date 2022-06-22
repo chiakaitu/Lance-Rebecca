@@ -10,7 +10,7 @@
     <!-- 文字 end -->
 
     <!-- 表單 start -->
-    <form class="display_flex middle"  @submit.prevent="addGoogle">
+    <form class="display_flex middle"  @submit="submit">
       <!------------- 第一題 ------------->
       <h1>1</h1>
       <b>您的大名</b>
@@ -189,6 +189,7 @@ export default {
     };
   },
   methods: {
+    submit: this.addGoogle(),
     async addGoogle() {
       const newData = {
         time: new Date().toLocaleString(),
