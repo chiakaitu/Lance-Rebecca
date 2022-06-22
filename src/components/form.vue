@@ -20,7 +20,7 @@
     <!------------- 第二題 ------------->
     <h1>2</h1>
     <b>您的聯絡電話</b>
-    <input type="phone" v-model="phone" />
+    <input type="text" inputmode="tel" v-model="phone" />
     <div class="margin_top_45"></div>
 
     <!------------- 第三題 ------------->
