@@ -1,20 +1,22 @@
 <template>
   <div class="box">
-    <img class="photo" :src="photo3" alt="" />
+    <!------------ 圖片區塊 start ------------>
+    <img class="" :src="photo3" alt="" />
+    <!------------ 圖片區塊 end ------------>
+
+    <!------------ 文字區塊 start ------------>
     <div class="float_right middle margin_top_30">
-      <p>從「我喜歡」</p>
-      <p>到「我願意」</p>
-      <div class="margin_top_30"></div>
-      <p>人的一生</p>
-      <p>只有一次選擇家人的機會</p>
-      <p>而我們是彼此親自挑選的家人</p>
+      <p>台北</p>
+      <p>是我們的家鄉</p>
+      <p>也是我們決定成家的地方</p>
     </div>
+    <!------------ 文字區塊 end ------------>
   </div>
 </template>
 
 <script>
 export default {
-  name: "sectionThree",
+  name: "sectionTwo",
   data() {
     return {
       photo3: require("../assets/images/photo3.jpg"),
@@ -25,4 +27,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.right {
+  justify-content: space-between;
+}
+
+img {
+  margin-top: 0;
+}
 </style>

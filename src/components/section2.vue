@@ -2,7 +2,6 @@
   <div class="box">
     <!------------ 圖片區塊 start ------------>
     <div class="wrap display_flex">
-
       <!-- 左邊 start -->
       <div class="left">
         <img class="" :src="photo2_1" alt="" />
@@ -15,16 +14,18 @@
         <img :src="photo2_3" alt="" />
       </div>
       <!-- 右邊 end -->
-
     </div>
     <!------------ 圖片區塊 end ------------>
-    
+
     <!------------ 文字區塊 start ------------>
-    <div class="float_right middle margin_top_30">
-      <p>台北</p>
-      <p>是我們的家鄉</p>
-      <p>也是我們決定成家的地方</p>
-    </div>
+    <div class="margin_top_30"></div>
+    <p>成都</p>
+    <p>是我們開始的起點</p>
+    <div class="margin_top_30"></div>
+    <p>相識 相知 相戀</p>
+    <p>一起走過1300多個日子</p>
+    <p>經歷春夏秋冬 共度喜怒哀樂</p>
+
     <!------------ 文字區塊 end ------------>
   </div>
 </template>
