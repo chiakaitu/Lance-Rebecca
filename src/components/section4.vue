@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <img class="photo" :src="photo4" alt="" />
+    <img data-aos-duration="1000" data-aos="zoom-in" class="photo" :src="photo4" alt="" />
     <div class="float_right middle margin_top_30">
       <p>從「我喜歡」</p>
       <p>到「我願意」</p>

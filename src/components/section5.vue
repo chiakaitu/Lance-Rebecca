@@ -3,10 +3,10 @@
     <!-- 圖片 start -->
     <div class="wrap display_flex">
       <div class="left">
-        <img class="photo" :src="photo5_1" alt="" />
+        <img data-aos-duration="600" data-aos="flip-right" class="photo" :src="photo5_1" alt="" />
       </div>
       <div class="right">
-        <img class="photo" :src="photo5_2" alt="" />
+        <img data-aos-duration="1400" data-aos="flip-right" class="photo" :src="photo5_2" alt="" />
       </div>
     </div>
     <!-- 圖片 end -->

@@ -33,13 +33,13 @@
     <!-- 圖片 start -->
     <div class="wrap display_flex">
       <div class="wrap_box">
-        <img class="photo" :src="photo6_1" alt="" />
+        <img data-aos-duration="400" data-aos="fade-down" class="photo" :src="photo6_1" alt="" />
       </div>
       <div class="wrap_box">
-        <img class="photo" :src="photo6_2" alt="" />
+        <img data-aos-duration="800" data-aos="fade-up" class="photo" :src="photo6_2" alt="" />
       </div>
       <div class="wrap_box">
-        <img class="photo" :src="photo6_3" alt="" />
+        <img data-aos-duration="1200" data-aos="fade-down" class="photo" :src="photo6_3" alt="" />
       </div>
     </div>
     <!-- 圖片 end -->

@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <!------------ 圖片區塊 start ------------>
-    <img class="" :src="photo3" alt="" />
+    <img data-aos-duration="1000" data-aos="fade-left" class="" :src="photo3" alt="" />
     <!------------ 圖片區塊 end ------------>
 
     <!------------ 文字區塊 start ------------>

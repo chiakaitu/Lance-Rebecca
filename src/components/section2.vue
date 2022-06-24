@@ -4,14 +4,14 @@
     <div class="wrap display_flex">
       <!-- 左邊 start -->
       <div class="left">
-        <img class="" :src="photo2_1" alt="" />
+        <img data-aos-duration="1200" data-aos="fade-right" class="" :src="photo2_1" alt="" />
       </div>
       <!-- 左邊 end -->
 
       <!-- 右邊 start -->
       <div class="right display_flex middle">
-        <img :src="photo2_2" alt="" />
-        <img :src="photo2_3" alt="" />
+        <img data-aos-duration="700" data-aos="fade-up" :src="photo2_2" alt="" />
+        <img data-aos-duration="1000" data-aos="fade-down" :src="photo2_3" alt="" />
       </div>
       <!-- 右邊 end -->
     </div>
