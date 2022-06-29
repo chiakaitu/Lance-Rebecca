@@ -1,4 +1,5 @@
 <template>
+  <h1>test123</h1>
   <div class="box display_flex middle">
     <!-- 文字 start -->
     <p>請以「一家人」為單位</p>
