@@ -25,7 +25,7 @@ import myResult from '../views/Result.vue'
 
 // const router = new VueRouter({
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/Lance-Rebecca/'),
 //   mode: 'history',
   routes
 })
