@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <p class="float_right">想和您分享我們的喜悅</p>
+    <p class="float_right">想和您分享我們的幸福喜悅</p>
     <img data-aos="fade-down" class="photo" :src="img1" alt="" />
     <div class="margin_top_30"></div>
     <img class="photo joy" :src="joy1" alt="" />
@@ -27,9 +27,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-p {
-  line-height: normal;
-}
 .joy {
   margin-top: 0;
   width: 35%;

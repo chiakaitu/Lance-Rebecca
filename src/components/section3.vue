@@ -7,8 +7,15 @@
     <!------------ 文字區塊 start ------------>
     <div class="float_right middle margin_top_30">
       <p>台北</p>
-      <p>是我們的家鄉</p>
-      <p>也是我們決定成家的地方</p>
+      <p>是我們的家</p>
+      <p>見證了我們新的身分</p>
+      <div class="margin_top_30"></div>
+      <p>未來的日子</p>
+      <p>一起面對柴米油鹽 經歷酸甜苦辣</p>
+      <div class="margin_top_30"></div>
+      <p>願我們可以保持初心</p>
+      <p>好好談一場</p>
+      <p>一輩子的戀愛</p>
     </div>
     <!------------ 文字區塊 end ------------>
   </div>

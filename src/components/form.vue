@@ -1,5 +1,5 @@
 <template>
-  <div class="box display_flex middle">
+  <div class="box display_flex middle" id="box">
     <!-- 文字 start -->
     <p>請以「一家人」為單位</p>
     <p>填寫以下資料</p>
@@ -25,7 +25,7 @@
     <!------------- 第三題 ------------->
     <h1>3</h1>
     <b>和新人的關係</b>
-    <p>鴻海夥伴請選"鴻海專屬，我都熟"，別擔心你們都有餅:)</p>
+    <div class="hint">鴻海夥伴請選"鴻海專屬，我都熟～～"，別擔心你們都有餅:)</div>
 
     <div class="wrap">
       <div class="radio_option">
@@ -58,7 +58,7 @@
           value="3"
           v-model="relation"
         />
-        <label for="relation3">鴻海專屬，我都熟</label>
+        <label for="relation3">鴻海專屬，我都熟～～</label>
       </div>
     </div>
 
@@ -67,7 +67,7 @@
     <!------------- 第四題 ------------->
     <h1>4</h1>
     <b>是否出席婚宴</b>
-    <p>無法前來的朋友請不要有壓力，非常感謝你們的祝福！</p>
+    <div class="hint">無法前來的朋友請不要有壓力，非常感謝你們的祝福！</div>
 
     <div class="wrap">
       <div class="radio_option">
@@ -142,6 +142,12 @@
 
     <!------------- 第九題 ------------->
     <h1>9</h1>
+    <b>喜帖郵寄地址</b>
+    <input type="text" v-model="address">
+    <div class="margin_top_45"></div>
+
+    <!------------- 第十題 ------------->
+    <h1>10</h1>
     <b>有什麼話想和我們說嗎</b>
     <textarea cols="36" rows="4" v-model="feedback"></textarea>
 
@@ -172,6 +178,7 @@ export default {
       child_num: "",
       veg_num: "",
       invitation: "",
+      address: "",
       feedback: "",
       creds: require("../../auth.json"),
       clickLock: false,
@@ -218,11 +225,13 @@ export default {
       this.child_num = "";
       this.veg_num = "";
       this.invitation = "";
+      this.address = "";
       this.feedback = "";
 
       this.clickLock = false;
       console.log("新增成功");
-      alert("新增成功");
+      // await alert("新增成功");
+      await this.$router.push('/result')
     },
     Q3formate() {
       switch (this.relation) {
@@ -264,6 +273,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#box {
+  margin-top: 30px;
+}
+
 .radio_option {
   display: inline-block;
 }
@@ -335,5 +348,18 @@ label {
 
 .button-80:not(:disabled):active {
   transform: translateY(.125rem);
+}
+
+.hint {
+  font-size: 12px;
+  color: rgb(85, 81, 81);
+}
+
+input[type="text"] {
+  font-size: 16px;
+}
+
+label {
+  font-size: 13px;
 }
 </style>
