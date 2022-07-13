@@ -155,7 +155,11 @@
     <!-- 表單 end -->
 
     <!-- 按鈕 start -->
-    <button class="button-80" v-on:click="addGoogle" :disabled="clickLock ? true : false">
+    <button
+      class="button-80"
+      v-on:click="addGoogle"
+      :disabled="clickLock ? true : false"
+    >
       送出
     </button>
     <!-- 按鈕 end -->
@@ -165,7 +169,7 @@
 
 <script>
 const { GoogleSpreadsheet } = require("google-spreadsheet");
-// const creds = require("@/auth.json");
+const $ = require('jquery');
 export default {
   name: "formSection",
   data() {
@@ -192,6 +196,33 @@ export default {
         return false;
       }
     },
+  },
+  mounted: function () {
+    $("input[type=text], textarea").on({
+      touchstart: function () {
+        console.log('^^^^^ touch start');
+        zoomDisable();
+      },
+    });
+    $("input[type=text], textarea").on({
+      touchend: function () {
+        console.log('^^^^^ touch end');
+        setTimeout(zoomEnable, 500);
+      },
+    });
+
+    function zoomDisable() {
+      $("head meta[name=viewport]").remove();
+      $("head").prepend(
+        '<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />'
+      );
+    }
+    function zoomEnable() {
+      $("head meta[name=viewport]").remove();
+      $("head").prepend(
+        '<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1" />'
+      );
+    }
   },
   methods: {
     async addGoogle() {
@@ -294,23 +325,23 @@ label {
 .button-80 {
   background: #fff;
   backface-visibility: hidden;
-  border-radius: .375rem;
+  border-radius: 0.375rem;
   border-style: solid;
-  border-width: .125rem;
+  border-width: 0.125rem;
   box-sizing: border-box;
   color: #212121;
   cursor: pointer;
   display: inline-block;
   font-size: 1.125rem;
   font-weight: 700;
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
   line-height: 1.3;
-  padding: .375rem 1.125rem;
+  padding: 0.375rem 1.125rem;
   position: relative;
   text-align: left;
   text-decoration: none;
   transform: translateZ(0) scale(1);
-  transition: transform .2s;
+  transition: transform 0.2s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -321,7 +352,7 @@ label {
 }
 
 .button-80:not(:disabled):hover:active {
-  transform: scale(1.05) translateY(.125rem);
+  transform: scale(1.05) translateY(0.125rem);
 }
 
 .button-80:focus {
@@ -330,10 +361,10 @@ label {
 
 .button-80:focus:before {
   content: "";
-  left: calc(-1*.375rem);
+  left: calc(-1 * 0.375rem);
   pointer-events: none;
   position: absolute;
-  top: calc(-1*.375rem);
+  top: calc(-1 * 0.375rem);
   transition: border-radius;
   user-select: none;
 }
@@ -347,7 +378,7 @@ label {
 }
 
 .button-80:not(:disabled):active {
-  transform: translateY(.125rem);
+  transform: translateY(0.125rem);
 }
 
 .hint {
