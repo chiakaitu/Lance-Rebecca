@@ -92,7 +92,7 @@ export default {
 }
 
 b {
-  color: #932220;
+  color: #bb5a52;
 }
 
 #line_box1 {

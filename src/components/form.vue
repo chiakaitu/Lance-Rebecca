@@ -1,10 +1,12 @@
 <template>
   <div class="box display_flex middle" id="box">
+    <loading v-model:active="isLoading"
+                 :is-full-page="true"/>
     <!-- 文字 start -->
     <p>請以「一家人」為單位</p>
     <p>填寫以下資料</p>
     <div class="margin_top_30"></div>
-    <hr />
+    <!-- <hr /> -->
     <div class="margin_top_20"></div>
     <div class="margin_top_20"></div>
     <!-- 文字 end -->
@@ -143,7 +145,7 @@
     <!------------- 第九題 ------------->
     <h1>9</h1>
     <b>喜帖郵寄地址</b>
-    <input type="text" v-model="address">
+    <input id="address" type="text" v-model="address">
     <div class="margin_top_45"></div>
 
     <!------------- 第十題 ------------->
@@ -155,9 +157,10 @@
     <!-- 表單 end -->
 
     <!-- 按鈕 start -->
-    <button class="button-80" v-on:click="addGoogle" :disabled="clickLock ? true : false">
+    <!-- <button class="button-80" v-on:click="addGoogle" :disabled="clickLock ? true : false">
       送出
-    </button>
+    </button> -->
+    <img class="photo btn" :src="form1" v-on:click="addGoogle" :disabled="clickLock ? true : false" alt="" />
     <!-- 按鈕 end -->
     <div class="margin_top_45"></div>
   </div>
@@ -165,11 +168,14 @@
 
 <script>
 const { GoogleSpreadsheet } = require("google-spreadsheet");
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
 // const creds = require("@/auth.json");
 export default {
   name: "formSection",
   data() {
     return {
+      form1: require('../assets/images/form1.png'),
       name: "",
       phone: "",
       relation: "",
@@ -182,7 +188,11 @@ export default {
       feedback: "",
       creds: require("../../auth.json"),
       clickLock: false,
+      isLoading: false,
     };
+  },
+  components: {
+    Loading
   },
   computed: {
     isQ4true() {
@@ -195,6 +205,7 @@ export default {
   },
   methods: {
     async addGoogle() {
+      this.isLoading = true;
       this.clickLock = true;
       const newData = {
         time: new Date().toLocaleString(),
@@ -277,12 +288,12 @@ export default {
   margin-top: 30px;
 }
 
-.radio_option {
-  display: inline-block;
+.btn {
+  width: 28%;
 }
 
-label {
-  margin-left: 15px;
+.radio_option {
+  display: inline-block;
 }
 
 .wrap {
@@ -290,76 +301,25 @@ label {
   text-align: left;
 }
 
-/* CSS */
-.button-80 {
-  background: #fff;
-  backface-visibility: hidden;
-  border-radius: .375rem;
-  border-style: solid;
-  border-width: .125rem;
-  box-sizing: border-box;
-  color: #212121;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.125rem;
-  font-weight: 700;
-  letter-spacing: -.01em;
-  line-height: 1.3;
-  padding: .375rem 1.125rem;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transform: translateZ(0) scale(1);
-  transition: transform .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-80:not(:disabled):hover {
-  transform: scale(1.05);
-}
-
-.button-80:not(:disabled):hover:active {
-  transform: scale(1.05) translateY(.125rem);
-}
-
-.button-80:focus {
-  outline: 0 solid transparent;
-}
-
-.button-80:focus:before {
-  content: "";
-  left: calc(-1*.375rem);
-  pointer-events: none;
-  position: absolute;
-  top: calc(-1*.375rem);
-  transition: border-radius;
-  user-select: none;
-}
-
-.button-80:focus:not(:focus-visible) {
-  outline: 0 solid transparent;
-}
-
-.button-80:focus:not(:focus-visible):before {
-  border-width: 0;
-}
-
-.button-80:not(:disabled):active {
-  transform: translateY(.125rem);
-}
-
 .hint {
   font-size: 12px;
   color: rgb(85, 81, 81);
 }
 
-input[type="text"] {
+input[type="text"], textarea {
   font-size: 16px;
+}
+
+input[type="text"] {
+  width: 100px;
+}
+
+#address {
+  width: 200px
 }
 
 label {
   font-size: 13px;
+  margin-left: 15px;
 }
 </style>

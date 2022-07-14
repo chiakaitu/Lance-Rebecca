@@ -29,6 +29,6 @@ export default {
 <style scoped>
 .joy {
   margin-top: 0;
-  width: 35%;
+  width: 55%;
 }
 </style>
