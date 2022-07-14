@@ -248,6 +248,7 @@ export default {
         child_num: this.child_num,
         veg_num: this.veg_num,
         invitation: this.Q8formate(),
+        address: this.address,
         feedback: this.feedback,
       };
 
