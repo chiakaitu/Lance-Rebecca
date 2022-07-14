@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <p class="float_right">想和您分享我們的幸福喜悅</p>
-    <img data-aos="fade-down" class="photo" :src="img1" alt="" />
+    <img class="photo" :src="img1" alt="" />
     <div class="margin_top_30"></div>
     <img class="photo joy" :src="joy1" alt="" />
     <div class="display_flex middle margin_top_35">
