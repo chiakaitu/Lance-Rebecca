@@ -14,6 +14,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 p {
+  font-family: 'Dancing Script';
   line-height: normal;
 }
 </style>

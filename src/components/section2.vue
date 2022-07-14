@@ -11,7 +11,7 @@
       <!-- 右邊 start -->
       <div class="right display_flex middle">
         <img data-aos-duration="700" data-aos="fade-up" :src="photo2_2" alt="" />
-        <img data-aos-duration="1000" data-aos="fade-down" :src="photo2_3" alt="" />
+        <img data-aos-duration="1000" data-aos="fade-left" :src="photo2_3" alt="" />
       </div>
       <!-- 右邊 end -->
     </div>
