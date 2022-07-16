@@ -357,7 +357,7 @@ input[type="text"] {
 }
 
 #address {
-  width: 200px;
+  width: 280px;
 }
 
 label {

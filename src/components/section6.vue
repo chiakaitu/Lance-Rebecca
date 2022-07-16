@@ -127,6 +127,14 @@ b {
   opacity: 60%;
 }
 
+@media (min-width: 768px) {
+  #line_box2 .line {
+    width: 42%;
+    top: -33px;
+    left: 99px;
+  }
+}
+
 .wrap {
   width: 100%;
   justify-content: space-between;
