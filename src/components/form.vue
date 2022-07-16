@@ -82,17 +82,17 @@
         <label for="show1">出席，一定要親眼見證！</label>
       </div>
 
-      <div class="radio_option">
+      <!-- <div class="radio_option">
         <input name="show" type="radio" id="show2" value="2" v-model="show" />
         <label v-on:click="toQ8()" for="show2"
           >好想去，但當天有事，禮到人不到～～</label
         >
-      </div>
+      </div> -->
 
       <div class="radio_option">
         <input name="show" type="radio" id="show3" value="3" v-model="show" />
         <label v-on:click="toQ8()" for="show3"
-          >無法出席，祝你們幸福美滿！</label
+          >無法出席，祝你們幸福美滿～～</label
         >
       </div>
     </div>
@@ -344,6 +344,7 @@ img {
 .hint {
   font-size: 12px;
   color: rgb(85, 81, 81);
+  margin-bottom: 20px;
 }
 
 input[type="text"],

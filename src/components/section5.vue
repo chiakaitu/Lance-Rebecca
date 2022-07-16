@@ -3,7 +3,7 @@
     <!-- 圖片 start -->
     <div class="wrap display_flex">
       <!-- <div class="left"> -->
-        <img data-aos-duration="1000" data-aos="fade-up" class="photo" :src="photo5_1" alt="" />
+        <img data-aos-duration="1000" data-aos="fade-down" class="photo" :src="photo5_1" alt="" />
       <!-- </div> -->
       <!-- <div class="right"> -->
         <!-- <img data-aos-duration="1400" data-aos="flip-right" class="photo" :src="photo5_2" alt="" /> -->
