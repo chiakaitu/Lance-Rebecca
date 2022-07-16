@@ -29,9 +29,6 @@
     <img class="photo" :src="formQ3" alt="" />
     <!-- <h1>3</h1>
     <b>和新人的關係</b> -->
-    <div class="hint">
-      鴻海夥伴請選"鴻海專屬，我都熟～～"，別擔心你們都有餅！
-    </div>
 
     <div class="wrap">
       <div class="radio_option">
@@ -67,6 +64,9 @@
         <label for="relation3">鴻海專屬，我都熟～～</label>
       </div>
     </div>
+    <div class="hint">
+      鴻海夥伴請選"鴻海專屬，我都熟～～"，你們都有餅♡
+    </div>
 
     <div class="margin_top_45"></div>
 
@@ -74,7 +74,6 @@
     <img class="photo" :src="formQ4" alt="" />
     <!-- <h1>4</h1>
     <b>是否出席婚宴</b> -->
-    <div class="hint">無法前來的朋友請不要有壓力，非常感謝你們的祝福！</div>
 
     <div class="wrap">
       <div class="radio_option">
@@ -96,6 +95,7 @@
         >
       </div>
     </div>
+    <div class="hint">無法前來的朋友請不要有壓力，非常感謝你們的祝福♡</div>
     <div class="margin_top_45"></div>
 
     <!------------- 第五題 ------------->
@@ -344,7 +344,7 @@ img {
 .hint {
   font-size: 12px;
   color: rgb(85, 81, 81);
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 input[type="text"],
